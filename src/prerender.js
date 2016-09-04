@@ -10,7 +10,8 @@ export default (locals, callback) => {
   const history = createMemoryHistory()
   const location = history.createLocation(locals.path)
   const stats = locals.webpackStats.toJson()
-  const stylesheets = createStyleString(stats.publicPath, stats.assetsByChunkName.main)
+  console.log(stats.as)
+  const stylesheets = createStyleString(stats.publicPath, stats.assetsByChunkName.prerender)
   const ReactDOMServer = require('react-dom/server')
   match({ routes, location }, (error, redirectLocation, renderProps) => {
     if (error) return callback(error)

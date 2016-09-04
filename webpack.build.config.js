@@ -9,7 +9,7 @@ const createStylesheetLoaders = require('./webpack/createStylesheetLoaders')
 
 module.exports = {
   entry: {
-    prerender: './src/prerender.js',
+    prerender: './src/prerender.js'
   },
 
   output: {

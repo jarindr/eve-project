@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --config webpack.dev.config.js --hot --inline --progress --color --history-api-fallback",
-    "build": "rm -rf public && webpack -p --config webpack.build.config.js --progress --color"
+    "build": "rm -rf public && webpack --config webpack.build.config.js --progress --color && echo 'Doing criticalcss' && node bin/criticalcss.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,7 @@
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-es2015-script": "^1.0.0",
     "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0",
     "critical": "^0.7.3",
     "css-loader": "^0.23.1",
     "dotenv": "^2.0.0",
