@@ -1,8 +1,8 @@
-import React, { component } from 'react'
+import React from 'react'
 
 import styles from './ImageSwitcher.styl'
 
-class ImageSwitcher extends component {
+class ImageSwitcher extends React.Component {
 
   render () {
     return (
