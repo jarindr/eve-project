@@ -22,6 +22,11 @@ module.exports = [
     loader: 'file?name=assets/images/[hash].[ext]'
   },
   {
+    test: /\.gif$/,
+    exclude: /\.placeholder\.(jpg|png)$/,
+    loader: 'file?name=assets/images/[hash].[ext]'
+  },
+  {
     test: /\.eps$/,
     exclude: /\.placeholder\.(jpg|png)$/,
     loader: 'file?name=assets/images/[hash].[ext]'
@@ -29,6 +34,9 @@ module.exports = [
   {
     test: /\.(eot|woff2|woff|ttf|otf|)(\?.*)?$/,
     loader: 'file?name=assets/fonts/[hash].[ext]'
+  },
+  {
+    test: /masonry|imagesloaded|fizzy\-ui\-utils|desandro\-|outlayer|get\-size|doc\-ready|eventie|eventemitter/,
+    loader: 'imports?define=>false&this=>window'
   }
-
 ]

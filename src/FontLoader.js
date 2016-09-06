@@ -1,5 +1,5 @@
 window.WebFontConfig = {
-  google: { families: [ 'Montserrat::latin' ] }
+  google: { families: [ 'Nixie One' ] }
 };
 (() => {
   var wf = document.createElement('script')

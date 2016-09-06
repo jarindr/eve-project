@@ -13,7 +13,6 @@ const NavBar = React.createClass({
   render () {
     return (
       <nav className={styles.nav}>
-        <img src={require('./assets/eb final.png')} className={styles.logo} />
         <ul>
           <li id='all' onClick={this.onNavClick}><img src={require('./assets/all.png')} height='30px' /></li>
           <li id='print' onClick={this.onNavClick}><img src={require('./assets/print.png')} height='30px' /></li>

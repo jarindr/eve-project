@@ -3,6 +3,8 @@ import './Layout.global.styl'
 import Helmet from 'react-helmet'
 import React from 'react'
 
+import TopNav from '../components/TopNav'
+
 const Layout = React.createClass({
   propTypes: {
     children: React.PropTypes.element
@@ -21,7 +23,10 @@ const Layout = React.createClass({
           meta={[
           ]}
         />
-        {this.props.children}
+      <div style={{marginTop: '30px'}}>
+          <TopNav />
+          {this.props.children}
+        </div>
       </div>
     )
   }
