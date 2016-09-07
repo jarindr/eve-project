@@ -7,7 +7,7 @@ import {withRouter} from 'react-router'
 
 import styles from './DetailPage.styl'
 
-const routeArray = ['/deedee/','/factsvsfaith/','/friendly/','/handbag/','/illustration/','/lovehurts/','/bamboo/' ,'/who/','/outline/','/battery/']
+const routeArray = ['/deedee/','/factsvsfaith/','/friendly/','/hangbag/','/illustration/','/lovehurts/','/bamboo/' ,'/who/','/outline/','/battery/']
 
 const LeftNavButton = React.createClass({
   render () {
@@ -26,19 +26,32 @@ const DetailPage = React.createClass({
     imageArray: React.PropTypes.array,
     router: React.PropTypes.shape({
       push: React.PropTypes.func
-    })
+    }),
+    location: React.PropTypes.object
+  },
+  getIndexNavigate () {
+    return routeArray.indexOf(this.props.location.pathname)
   },
   renderItems () {
     return this.props.imageArray.map((x, i) => {
       return (
-        <div key={i}><img src={x.image} className={styles.imageSlide} /> <div className={styles.imageName}>{x.name}</div> </div>
+        <div key={i} style={{height: '500px'}}><img src={x.image} className={styles.imageSlide} /> <div className={styles.imageName}>{x.name}</div> </div>
       )
     })
   },
   onPrevClick () {
+    let index = this.getIndexNavigate() - 1
+    if (index < 0) {
+      index = routeArray.length - 1
+    }
+    this.props.router.push(routeArray[index])
   },
-  onPrevClick () {
-
+  onNextClick () {
+    let index = this.getIndexNavigate() + 1
+    if (index > routeArray.length - 1) {
+      index = 0
+    }
+    this.props.router.push(routeArray[index])
   },
   render () {
     return (
@@ -47,8 +60,8 @@ const DetailPage = React.createClass({
           <img src={this.props.imageCatagory} />
         </div>
         <div className={styles.navigation}>
-          <img src={require('./assets/previous.png')} className={styles.prev} />
-          <img src={require('./assets/next.png')} className={styles.next} />
+          <img src={require('./assets/previous.png')} className={styles.prev} onClick={this.onPrevClick} />
+          <img src={require('./assets/next.png')} className={styles.next} onClick={this.onNextClick} />
         </div>
         <div className={styles.detail}>
           {this.props.children}

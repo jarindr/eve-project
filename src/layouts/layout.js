@@ -23,9 +23,9 @@ const Layout = React.createClass({
           meta={[
           ]}
         />
-      <div style={{marginTop: '30px'}}>
+        <div style={{marginTop: '30px'}}>
           <TopNav />
-          {this.props.children}
+            {this.props.children}
         </div>
       </div>
     )

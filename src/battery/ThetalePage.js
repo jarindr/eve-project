@@ -12,7 +12,7 @@ const dataSlide = [
 const Page = React.createClass({
   render () {
     return (
-      <DetailPage
+      <DetailPage {...this.props}
         imageCatagory={require('./assets/name8.png')}
         imageArray={dataSlide}
       >

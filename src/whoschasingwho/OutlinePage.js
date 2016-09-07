@@ -8,11 +8,11 @@ const dataSlide = [
 const Page = React.createClass({
   render () {
     return (
-      <DetailPage
+      <DetailPage {...this.props}
         imageCatagory={require('./assets/name10.png')}
         imageArray={dataSlide}
       >
-        <b>asdasdasdasdasasdasdasdasdasasdasdasdasdasasdasdasdas dasasdasdasdasdasasdasdasdasdasasdasdasdasdasasdasdasdasdasasdasdasdasdas</b>
+        <b>a not so classic story.</b>
       </DetailPage>
     )
   }

@@ -14,7 +14,7 @@ const dataSlide = [
 const DeeDeePage = React.createClass({
   render () {
     return (
-      <DetailPage
+      <DetailPage {...this.props}
         imageCatagory={require('./assets/deedee.png')}
         imageArray={dataSlide}
       >

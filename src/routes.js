@@ -8,6 +8,7 @@ import FriendlyPage from '../src/friendly/FriendlySuggestionPage'
 import HandbagPage from '../src/handbag/HandbagPage'
 import HomePage from '../src/home/HomePage'
 import IllustrationPage from '../src/illustration/IllustrationPage'
+import InformationPage from '../src/information/InformationPage'
 import Layout from '../src/layouts/layout'
 import LovehurtsPage from '../src/lovehurts/LoveHurtsPage'
 import OutlinePage from '../src/outline/OutlinePage'
@@ -29,6 +30,7 @@ export default (
       <Route path='/who/' component={WhoPage} />
       <Route path='/outline/' component={OutlinePage} />
       <Route path='/battery/' component={BatteryPage} />
+      <Route path='/information/' component={InformationPage} />
     </Route>
   </div>
 )
