@@ -1,5 +1,6 @@
 module.exports = {
   paths: [
-    '/'
+    '/',
+    '/deedee/'
   ]
 }

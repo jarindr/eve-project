@@ -1,6 +1,6 @@
-import FlipMove from 'react-flip-move'
 import Masonry from 'react-masonry-component'
 import React from 'react'
+import { withRouter } from 'react-router'
 
 import data from './artBoxesData'
 import styles from './HomePage.styl'
@@ -10,11 +10,21 @@ import NavBar from './NavBar'
 const GridItem = React.createClass({
   propTypes: {
     imageCover: React.PropTypes.string,
-    imageHover: React.PropTypes.string
+    imageHover: React.PropTypes.string,
+    height: React.PropTypes.number,
+    width: React.PropTypes.number,
+    router: React.PropTypes.shape({
+      push: React.PropTypes.func
+    }),
+    link: React.PropTypes.string
+  },
+  onClickNavigate (path) {
+    console.log(this.props)
+    return () => this.props.router.push(path)
   },
   render () {
     return (
-      <div className={styles.box} style={{width: this.props.width, height: this.props.height, margin: this.props.key==0 ? 0 : '10px'}} >
+      <div className={styles.box} onClick={this.onClickNavigate(this.props.link)} style={{width: this.props.width, height: this.props.height, margin: '10px'}} >
         <ImageSwitcher
           imageCover={this.props.imageCover}
           imageHover={this.props.imageHover}
@@ -44,6 +54,8 @@ const HomePage = React.createClass({
         width={x.width}
         height={x.height}
         key={x.key}
+        link={x.link}
+        {...this.props}
       />
     )
   )
@@ -63,4 +75,4 @@ const HomePage = React.createClass({
     )
   }
 })
-export default HomePage
+export default withRouter(HomePage)

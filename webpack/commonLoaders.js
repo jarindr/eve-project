@@ -34,9 +34,5 @@ module.exports = [
   {
     test: /\.(eot|woff2|woff|ttf|otf|)(\?.*)?$/,
     loader: 'file?name=assets/fonts/[hash].[ext]'
-  },
-  {
-    test: /masonry|imagesloaded|fizzy\-ui\-utils|desandro\-|outlayer|get\-size|doc\-ready|eventie|eventemitter/,
-    loader: 'imports?define=>false&this=>window'
   }
 ]

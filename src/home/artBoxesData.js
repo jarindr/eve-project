@@ -1,7 +1,7 @@
 const dataArtBoxes = [
   {
-    cover: require('./assets/deedee1.png'),
-    hover: require('./assets/deedee2.png'),
+    cover: '',
+    hover: '',
     type: 'all',
     width: 1,
     height: 1,
@@ -11,7 +11,8 @@ const dataArtBoxes = [
     cover: require('./assets/deedee1.png'),
     hover: require('./assets/deedee2.png'),
     type: 'something',
-    key: 1
+    key: 1,
+    link: '/deedee/'
   },
   {
     cover: require('./assets/thetaleofbamboocutter1.png'),
