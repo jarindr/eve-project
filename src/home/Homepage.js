@@ -19,7 +19,6 @@ const GridItem = React.createClass({
     link: React.PropTypes.string
   },
   onClickNavigate (path) {
-    console.log(this.props)
     return () => this.props.router.push(path)
   },
   render () {

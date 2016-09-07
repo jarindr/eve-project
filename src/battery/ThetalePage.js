@@ -3,23 +3,25 @@ import React from 'react'
 import DetailPage from '../components/DetailPage'
 
 const dataSlide = [
-  {name: 'ab', image: require('./assets/friendlysuggestion.gif')},
-  {name: 'ab', image: require('./assets/2_copy.jpg')},
-  {name: 'ab', image: require('./assets/3_crop.jpg')},
-  {name: 'ab', image: require('./assets/4_copy.jpg')},
-  {name: 'ab', image: require('./assets/5_crop.jpg')},
-  {name: 'ab', image: require('./assets/6_crop.jpg')},
-  {name: 'ab', image: require('./assets/7_copy.jpg')}
+  {name: '', image: require('./assets/BAATTTTT.png')},
+  {name: '', image: require('./assets/HHHHHH.png')},
+  {name: '', image: require('./assets/SSSSS.png')},
+  {name: '', image: require('./assets/SSSSSDDD.png')}
 ]
 
 const Page = React.createClass({
   render () {
     return (
       <DetailPage
-        imageCatagory={require('./assets/friendly suggestion.png')}
+        imageCatagory={require('./assets/name8.png')}
         imageArray={dataSlide}
       >
-        <b>asdasdasdasdasasdasdasdasdasasdasdasdasdasasdasdasdas dasasdasdasdasdasasdasdasdasdasasdasdasdasdasasdasdasdasdasasdasdasdasdas</b>
+        <b>
+          You will never know what you’ll miss when your phone battery dies <br />
+          and that is the reason why I make sure you never miss a thing by creating an app that help you find places or people nearby
+          that are willing to help you charge your phone right before it dies and in return gives back benefits to those who help people in need
+          such as internet accessibility and even monetary rewards.
+        </b>
       </DetailPage>
     )
   }

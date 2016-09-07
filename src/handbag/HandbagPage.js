@@ -3,16 +3,17 @@ import React from 'react'
 import DetailPage from '../components/DetailPage'
 
 const dataSlide = [
-  {name: '', image: require('./assets/whoschasingwhoresize.gif')}
+  {name: '', image: require('./assets/hangbag-new.gif')}
 ]
+
 const Page = React.createClass({
   render () {
     return (
       <DetailPage
-        imageCatagory={require('./assets/name10.png')}
+        imageCatagory={require('./assets/name4.png')}
         imageArray={dataSlide}
       >
-        <b>asdasdasdasdasasdasdasdasdasasdasdasdasdasasdasdasdas dasasdasdasdasdasasdasdasdasdasasdasdasdasdasasdasdasdasdasasdasdasdasdas</b>
+        <b>WHO WANTS THEIR BAG TO GET DIRTY … WELL NOT ME</b>
       </DetailPage>
     )
   }

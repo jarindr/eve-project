@@ -12,12 +12,12 @@ module.exports = [
     loader: 'url?name=assets/images/[hash].[ext]&limit=4096'
   },
   {
-    test: /\.(svg|png)(\?.*)?$/,
+    test: /\.(svg|png|PNG)(\?.*)?$/,
     exclude: /\.placeholder\.(jpg|png)$/,
     loader: 'url?name=assets/images/[hash].[ext]&limit=4096'
   },
   {
-    test: /\.jpg$/,
+    test: /\.(jpg|JPG)|jpeg$/,
     exclude: /\.placeholder\.(jpg|png)$/,
     loader: 'file?name=assets/images/[hash].[ext]'
   },

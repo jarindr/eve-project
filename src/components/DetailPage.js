@@ -3,8 +3,11 @@ import '../../node_modules/slick-carousel/slick/slick.css'
 
 import React from 'react'
 import Slider from 'react-slick'
+import {withRouter} from 'react-router'
 
 import styles from './DetailPage.styl'
+
+const routeArray = ['/deedee/','/factsvsfaith/','/friendly/','/handbag/','/illustration/','/lovehurts/','/bamboo/' ,'/who/','/outline/','/battery/']
 
 const LeftNavButton = React.createClass({
   render () {
@@ -20,7 +23,10 @@ const DetailPage = React.createClass({
   propTypes: {
     imageCatagory: React.PropTypes.string,
     children: React.PropTypes.node,
-    imageArray: React.PropTypes.array
+    imageArray: React.PropTypes.array,
+    router: React.PropTypes.shape({
+      push: React.PropTypes.func
+    })
   },
   renderItems () {
     return this.props.imageArray.map((x, i) => {
@@ -28,6 +34,11 @@ const DetailPage = React.createClass({
         <div key={i}><img src={x.image} className={styles.imageSlide} /> <div className={styles.imageName}>{x.name}</div> </div>
       )
     })
+  },
+  onPrevClick () {
+  },
+  onPrevClick () {
+
   },
   render () {
     return (
@@ -56,4 +67,4 @@ const DetailPage = React.createClass({
 })
 
 
-export default DetailPage
+export default withRouter(DetailPage)
