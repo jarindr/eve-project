@@ -14,7 +14,7 @@ const Layout = React.createClass({
       <div>
         <Helmet
           titleTemplate=''
-          defaultTitle=''
+          defaultTitle='eve baker'
           script={[
             {innerHTML: require('raw!../FontLoader.js'), 'type': 'text/javascript'}
           ]}
