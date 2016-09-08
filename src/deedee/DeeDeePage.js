@@ -18,7 +18,10 @@ const DeeDeePage = React.createClass({
         imageCatagory={require('./assets/deedee.png')}
         imageArray={dataSlide}
       >
-        <b>Taste is such a universal feeling so why not making Deeded logo which means 'tasty' in Thai. It is named so it could be understood in both Thai and English.</b>
+        <b>
+          Taste is such a universal feeling so why not making Deeded logo which means 'tasty' in Thai.
+          It is named so it could be understood in both Thai and English.
+        </b>
       </DetailPage>
     )
   }

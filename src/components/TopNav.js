@@ -7,11 +7,22 @@ const TopNav = React.createClass({
   propTypes: {
     router: React.PropTypes.any
   },
+  getInitialState () {
+    return {
+      location: ''
+    }
+  },
+  componentDidMount () {
+    this.setState({location: window.location.pathname})
+  },
   onClick (route) {
-    return () => this.props.router.push(route)
+    return () => {
+      this.props.router.push(route)
+      this.setState({location: window.location.pathname})
+    }
   },
   renderInformation () {
-    if (window.location.pathname !== '/information/') {
+    if (this.state.location !== '/information/') {
       return (
         <img src={require('./assets/information.png')} className={styles.information} onClick={this.onClick('/information/')} />
       )
