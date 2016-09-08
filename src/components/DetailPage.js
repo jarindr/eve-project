@@ -7,7 +7,7 @@ import {withRouter} from 'react-router'
 
 import styles from './DetailPage.styl'
 
-const routeArray = ['/deedee/','/factsvsfaith/','/friendly/','/hangbag/','/illustration/','/lovehurts/','/bamboo/' ,'/who/','/outline/','/battery/']
+const routeArray = ['/deedee/', '/factsvsfaith/', '/friendly/', '/hangbag/', '/illustration/', '/lovehurts/', '/bamboo/', '/who/', '/outline/', '/battery/']
 
 const LeftNavButton = React.createClass({
   render () {
@@ -35,7 +35,7 @@ const DetailPage = React.createClass({
   renderItems () {
     return this.props.imageArray.map((x, i) => {
       return (
-        <div key={i} style={{height: '500px'}}><img src={x.image} className={styles.imageSlide} /> <div className={styles.imageName}>{x.name}</div> </div>
+        <div key={i} style={{height: '600px'}}><img src={x.image} className={styles.imageSlide} /> <div className={styles.imageName}>{x.name}</div> </div>
       )
     })
   },
@@ -53,6 +53,24 @@ const DetailPage = React.createClass({
     }
     this.props.router.push(routeArray[index])
   },
+  renderSlider () {
+    if (this.renderItems().length > 1) {
+      return (
+        <Slider
+          nextArrow={<LeftNavButton />}
+          prevArrow={<RightNavButton />}
+        >
+        {this.renderItems()}
+        </Slider>
+      )
+    } else {
+      return (
+        <div style={{textAlign: 'center'}}>
+          {this.renderItems()}
+        </div>
+      )
+    }
+  },
   render () {
     return (
       <div className={styles.container}>
@@ -67,17 +85,11 @@ const DetailPage = React.createClass({
           {this.props.children}
         </div>
         <div className={styles.sliderContainer}>
-          <Slider
-            nextArrow={<LeftNavButton />}
-            prevArrow={<RightNavButton />}
-          >
-          {this.renderItems()}
-          </Slider>
+          {this.renderSlider()}
         </div>
       </div>
     )
   }
 })
-
 
 export default withRouter(DetailPage)

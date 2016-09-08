@@ -12,7 +12,7 @@ const Page = React.createClass({
         imageCatagory={require('./assets/name10.png')}
         imageArray={dataSlide}
       >
-        <b>a not so classic story.</b>
+        <b>A not so classic story.</b>
       </DetailPage>
     )
   }

@@ -24,7 +24,7 @@ const Page = React.createClass({
         imageCatagory={require('./assets/name7.png')}
         imageArray={dataSlide}
       >
-        <b>MISSING TEXT HERE</b>
+        <b></b>
       </DetailPage>
     )
   }
