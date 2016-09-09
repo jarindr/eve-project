@@ -14,7 +14,8 @@ const dataSlide = [
   {name: 'featured on Kult #18 OBSERVATION', image: require('./assets/9_crop.jpg')},
   {name: '', image: require('./assets/10_crop.jpg')},
   {name: '', image: require('./assets/11_crop.jpg')},
-  {name: '', image: require('./assets/12_copy.jpg')}
+  {name: '', image: require('./assets/12_copy.jpg')},
+  {name: '<a href="https://www.instagram.com/her_mess_/?hl=en">https://www.instagram.com/her_mess_/?hl=en</a>', image: require('./assets/sticker.png')}
 ]
 
 const Page = React.createClass({

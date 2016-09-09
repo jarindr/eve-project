@@ -32,10 +32,15 @@ const DetailPage = React.createClass({
   getIndexNavigate () {
     return routeArray.indexOf(this.props.location.pathname)
   },
+  createMarkUp (x) {
+    return {__html: x.name}
+  },
   renderItems () {
     return this.props.imageArray.map((x, i) => {
       return (
-        <div key={i} style={{height: '600px'}}><img src={x.image} className={styles.imageSlide} /> <div className={styles.imageName}>{x.name}</div> </div>
+        <div key={i} style={{height: '600px'}}><img src={x.image} className={styles.imageSlide} />
+          <div className={styles.imageName} dangerouslySetInnerHTML={this.createMarkUp(x)} />
+        </div>
       )
     })
   },
