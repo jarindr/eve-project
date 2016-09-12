@@ -19,7 +19,7 @@ const Layout = React.createClass({
             {innerHTML: require('raw!../FontLoader.js'), 'type': 'text/javascript'}
           ]}
           link={[
-            {'rel': 'shortcut icon', 'href': require('../home/assets/icon ja (1).png')}
+            {'rel': 'shortcut icon', 'href': require('../components/assets/แทนรูปตรงช่องใส่เว็บ.png')}
           ]}
           meta={[
           ]}

@@ -32,10 +32,21 @@ const TopNav = React.createClass({
       )
     }
   },
+  renderLogo () {
+    if (this.state.location !== '/') {
+      return (
+        <img src={require('../home/assets/eb final.png')} className={styles.logo} onClick={this.onClick('/')} />
+      )
+    } else {
+      return (
+        <img src={require('../home/assets/eb final underline.png')} className={styles.logo} onClick={this.onClick('/')} />
+      )
+    }
+  },
   render () {
     return (
       <div className={styles.container}>
-        <img src={require('../home/assets/eb final.png')} className={styles.logo} onClick={this.onClick('/')} />
+        {this.renderLogo()}
         {this.renderInformation()}
       </div>
     )
