@@ -15,7 +15,12 @@ const dataSlide = [
   {name: '', image: require('./assets/10_crop.jpg')},
   {name: '', image: require('./assets/11_crop.jpg')},
   {name: '', image: require('./assets/12_copy.jpg')},
-  {name: '<a href="https://www.instagram.com/her_mess_/?hl=en">https://www.instagram.com/her_mess_/?hl=en</a>', image: require('./assets/sticker.png')}
+  {name: '<a href="https://www.instagram.com/her_mess_/?hl=en">https://www.instagram.com/her_mess_/?hl=en</a>', image: require('./assets/sticker.png')},
+  {name: '', image: require('./assets/1.jpg')},
+  {name: '', image: require('./assets/pear.jpg')},
+  {name: '', image: require('./assets/thaithai.jpg')},
+  {name: '', image: require('./assets/Scan 136.jpg')},
+  {name: '', image: require('./assets/Scan 328 copy.jpg')}
 ]
 
 const Page = React.createClass({
