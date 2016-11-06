@@ -3,11 +3,10 @@ import '../../node_modules/slick-carousel/slick/slick.css'
 
 import React from 'react'
 import Slider from 'react-slick'
+import styles from './DetailPage.styl'
 import {withRouter} from 'react-router'
 
-import styles from './DetailPage.styl'
-
-const routeArray = ['/deedee/', '/factsvsfaith/', '/friendly/', '/hangbag/', '/illustration/', '/lovehurts/', '/bamboo/', '/who/', '/outline/', '/battery/']
+const routeArray = ['/juicy/', '/cookbook/', '/9/', '/deedee/', '/factsvsfaith/', '/friendly/', '/hangbag/', '/illustration/', '/lovehurts/', '/bamboo/', '/who/', '/outline/', '/battery/']
 
 const LeftNavButton = React.createClass({
   render () {
