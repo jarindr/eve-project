@@ -8,6 +8,27 @@ const dataArtBoxes = [
     key: 0
   },
   {
+    cover: require('./assets/COVER1_juicy.png'),
+    hover: require('./assets/COVER2_juicy.png'),
+    type: 'print',
+    key: 123,
+    link: '/juicy/'
+  },
+  {
+    cover: require('./assets/COVER1_cookbook.gif'),
+    hover: require('./assets/COVER2_cookbook.png'),
+    type: 'print',
+    key: 1234,
+    link: '/cookbook/'
+  },
+  {
+    cover: require('./assets/cover1_#9.png'),
+    hover: require('./assets/cover2_#9.png'),
+    type: 'print',
+    key: 12345,
+    link: '/9/'
+  },
+  {
     cover: require('./assets/deedee1.png'),
     hover: require('./assets/deedee2.png'),
     type: 'something',
