@@ -1,6 +1,5 @@
-import React from 'react'
-
 import DetailPage from '../components/DetailPage'
+import React from 'react'
 
 const dataSlide = [
   {name: '', image: require('./assets/001_crop.jpg')},
@@ -18,9 +17,7 @@ const dataSlide = [
   {name: '<a href="https://www.instagram.com/her_mess_/?hl=en">https://www.instagram.com/her_mess_/?hl=en</a>', image: require('./assets/sticker.png')},
   {name: '', image: require('./assets/1.jpg')},
   {name: '', image: require('./assets/pear.jpg')},
-  {name: '', image: require('./assets/thaithai.jpg')},
-  {name: '', image: require('./assets/Scan 136.jpg')},
-  {name: '', image: require('./assets/Scan 328 copy.jpg')}
+  {name: '', image: require('./assets/thaithai.jpg')}
 ]
 
 const Page = React.createClass({

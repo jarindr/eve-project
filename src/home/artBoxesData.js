@@ -52,7 +52,7 @@ const dataArtBoxes = [
   {
     cover: require('./assets/illustration1.png'),
     hover: require('./assets/illustration2.png'),
-    type: 'something',
+    type: 'print',
     key: 7,
     link: '/illustration/'
   },
